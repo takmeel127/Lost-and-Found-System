@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Listings</title>
+  <link rel="stylesheet" href="{% static 'css/search.css' %}" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <span class="circle"><img src="{% static 'image/logo.png' %}" alt="LOGO"></span>
+        <h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <div class="back">
+      <a href="{% url 'accounts:home' %}">← Back to Dashboard</a>
+    </div>
+
+    <!-- Page Heading -->
+    <div class="header-text">
+      <h2>Item Listings</h2>
+      <p>Browse all reported lost and found items</p>
+    </div>
+
+<!-- Search Bar -->
+<div class="search-bar">
+  <form method="get" class="searchForm">
+    <input type="text" name="q" placeholder="Search items by name, category, or location..." value="{{ query }}">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+    <!-- Item Cards Container -->
+    <div class="card-container">
+      {% for item in items %}
+      <div class="card">
+        <div class="photo">
+          <img src="{{ item.image }}" alt="{{ item.name }}">
+        </div>
+        <h3>{{ item.name }} 
+          {% if item.status == "lost" %}
+            <span class="status lost">LOST</span>
+          {% else %}
+            <span class="status found">FOUND</span>
+          {% endif %}
+        </h3>
+        <p class="category">{{ item.category }}</p>
+        <p class="desc">{{ item.description }}</p>
+        <p class="info">📍 {{ item.location }}</p>
+        <p class="info">📅 {{ item.date }}</p>
+        <button>
+          <a href="{% url 'items:item_detail' item.status item.id %}">View Details</a>
+        </button>
+        </div>
+      {% endfor %}
+    </div>
+
+    <footer>
+      Prototype of the Proposed Lost and Found Management System. (2025)
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- templates/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login - Lost & Found</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🎓</div>
+        <h2 class="heading1">Lost & Found System</h2>
+        <p>National University of Modern Languages</p>
+        <a href="{% url 'starter' %}" class="back-btn">← Back</a>
+
+        <h2 class="heading2">Student Login</h2>
+
+        {% if form.errors %}
+            <div class="errors">
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="post" action="{% url 'accounts:login' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="email" name="email" id="email" required value="{{ form.email.value|default_if_none:'' }}">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" id="password" required>
+                <label for="password">Password</label>
+            </div>
+
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+    </div>
+
+    <footer>
+        Prototype of the Proposed Lost and Found Management System. (2025)
+    </footer>
+
+    <script src="{% static 'js/student-login.js' %}"></script>
+</body>
+</html>

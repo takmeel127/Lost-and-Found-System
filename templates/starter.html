@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost & Found Management System</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🎓</div>
+    <h2> Lost & Found System</h2>
+    <p>National University of Modern Languages</p>
+    <p>Choose Login Type</p>
+
+    <a href="{% url 'accounts:login' %}" class="btn student-btn">Student Login</a>
+    <p class="note">
+      This is a prototype of the proposed Lost and Found Management System (User and Admin demo access).
+    </p>
+  </div>
+  
+
+  <footer>
+    Prototype of the Proposed Lost and Found Management System. (2025)
+  </footer>
+
+</body>
+</html>
+
+
+

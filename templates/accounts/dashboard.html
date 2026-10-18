@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard - BPC Lost & Found</title>
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<header>
+<div class="logo">
+<span class="circle"><img src="../static/image/logo.png" alt="LOGO"></span>
+<h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+</div>
+</header>
+
+
+<main>
+<h2 class="wel-user">Welcome, Student!</h2>
+<p class="subtitle">What would you like to do today?</p>
+
+
+<div class="card-container">
+<div class="card">
+<div class="icon red"></div>
+<h3>Report Lost Item</h3>
+<p>Report it here and get notified when it's found.</p>
+<button class="btn" id="lostBtn"><a href="{% url 'items:lost_item_upload' %}">Report Lost Item</a></button>
+</div>
+
+
+<div class="card">
+<div class="icon green"></div>
+<h3>Report Found Item</h3>
+<p>Found something? Help return to owner.</p>
+<button class="btn" id="foundBtn"><a href="{% url 'items:found_item_upload' %}">Report Found Item</a></button>
+</div>
+
+
+<div class="card">
+<div class="icon blue"></div>
+<h3>View Items</h3>
+<p>here all reported lost and found items.</p>
+<button class="btn" id="browseBtn"><a href="{% url 'items:lost_and_found_list' %}">Browse Items</a></button>
+</div>
+</div>
+
+
+
+
+<div class="bottom-buttons">
+<button id="logoutBtn" class="logout"><a href="{% url 'accounts:login' %}">Logout</a></button>
+</div>
+</main>
+
+
+<footer>
+    <p>Prototype of the Proposed Lost and Found Management System. (2025)</p>
+</footer>
+
+<script src="../static/js/script.js"></script>
+</body>
+</html>

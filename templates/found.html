@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Found Item</title>
+  <link rel="stylesheet" href="{% static 'css/lost&found.css' %}" />
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span class="circle"><img src="{% static 'image/logo.png' %}" alt="LOGO"></span>
+        <h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+    </div>
+</header>
+
+<div class="lost-container">
+
+    <div class="back">
+        <a href="{% url 'accounts:home' %}">← Back to Dashboard</a>
+    </div>
+
+    <div class="container">
+        <h2>Report Found Item</h2>
+        <h5>Help return a found item to its owner</h5>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <!-- Image Upload -->
+            <div class="upload-box">
+                {{ form.image.label_tag }}
+                {{ form.image }}
+                
+                <p class="upload-text">Click to upload a photo of the found item</p>
+                <span>JPG, PNG or GIF (max 5MB)</span>
+                {% if form.image.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.image.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <!-- Name & Category -->
+            <div class="form-row">
+                <div class="input-group">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.name.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="input-group">
+                    {{ form.category.label_tag }}
+                    {{ form.category }}
+                    {% if form.category.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.category.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="input-group">
+                {{ form.description.label_tag }}
+                {{ form.description }}
+                {% if form.description.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.description.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <!-- Date Found & Location -->
+            <div class="form-row">
+                <div class="input-group">
+                    {{ form.date_found.label_tag }}
+                    {{ form.date_found }}
+                    {% if form.date_found.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.date_found.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="input-group">
+                    {{ form.found_location.label_tag }}
+                    {{ form.found_location }}
+                    {% if form.found_location.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.found_location.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="button" class="cancel-btn">
+                    <a href="{% url 'accounts:home' %}">Cancel</a>
+                </button>
+                <button type="submit" class="submit-btn">Submit Report</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        Prototype of the Proposed Lost and Found Management System. (2025)
+    </footer>
+
+</div>
+
+</body>
+</html>

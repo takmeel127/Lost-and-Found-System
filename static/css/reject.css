@@ -1,0 +1,183 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #4A70A9;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 70px;
+  margin-right: 15px;
+}
+
+.logo h1 {
+  font-size: 36px;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  margin: 25px 0 0 40px;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: #4A70A9;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ===== Main Container ===== */
+.rejection-container {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.title {
+  color: #4A70A9;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* ===== Rejection Box ===== */
+.reject-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.reason {
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.issues {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.issues li {
+  color: #dc3545;
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.improve {
+  background-color: #e7f1ff;
+  border: 1px solid #b6daff;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.improve li {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #004085;
+}
+
+/* ===== Buttons ===== */
+.next-steps {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.submit-btn {
+  background-color: #4A70A9;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dashboard-btn {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #8FABD4;
+}
+
+.dashboard-btn:hover {
+  background-color: #ddd;
+}
+
+/* ===== Support Text ===== */
+.support-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.support-link {
+  color: #4A70A9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.support-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #4A70A9;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  position: fixed;
+  bottom: 0;
+  font-size: 16px;
+}

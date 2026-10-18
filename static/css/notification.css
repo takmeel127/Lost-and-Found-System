@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/* ===== Logo/Header Section ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  color: yellow;
+  padding: 15px 0;
+  border-bottom: solid 1px black;
+}
+
+.logo .circle img {
+  width: 80px;
+  margin-left: 150px;
+}
+
+.logo h1 {
+  margin-left: 20px;
+  margin-right: 160px;
+  font-size: 26px;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Back Button */
+.back a {
+  text-decoration: none;
+  color: #007A00;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.back {
+  margin-bottom: 20px;
+}
+
+/* Title */
+.title {
+  color: #007A00;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+/* Notification List */
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notification {
+  background-color: white;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 5px solid transparent;
+  transition: 0.3s ease;
+}
+
+.notification:hover {
+  transform: scale(1.01);
+}
+
+/* Status Colors */
+.notification.approved {
+  border-left-color: #28a745;
+}
+
+.notification.rejected {
+  border-left-color: #dc3545;
+}
+
+.notification.match {
+  border-left-color: #007bff;
+}
+
+/* Text Section */
+.text h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.text p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.text .time {
+  font-size: 13px;
+  color: #888;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* Button */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: green;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}

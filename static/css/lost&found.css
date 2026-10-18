@@ -1,0 +1,206 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.lost-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Logo/Header Section ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #4A70A9;
+  color: white;
+  padding: 15px 0;
+  border-bottom: 1px solid black;
+}
+
+.logo .circle img {
+  width: 80px;
+  margin-left: 150px;
+}
+
+.logo h1 {
+  margin: 0 160px 0 20px;
+  font-size: 36px;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ===== Back Button ===== */
+.back {
+  width: 80%;
+  margin-top: 25px;
+}
+
+.back a {
+  color: #4A70A9;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* ===== Main Container ===== */
+.container {
+  background: #fff;
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+  text-align: center;
+  color: #222;
+  font-size: 26px;
+}
+
+.container h5 {
+  text-align: center;
+  color: #555;
+  margin: 8px 0 30px;
+  font-weight: 400;
+}
+
+/* ===== Upload Box ===== */
+.upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #4A70A9;
+}
+
+.preview-img {
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0 auto 10px;
+}
+
+
+
+.upload-text {
+  color: #8FABD4;
+  font-weight: 600;
+}
+
+.upload-box span {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== Form ===== */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #4A70A9;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Cancel */
+.cancel-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #aaa;
+}
+
+/* Submit */
+.submit-btn {
+  background: #4A70A9;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: #8FABD4;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #4A70A9;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}

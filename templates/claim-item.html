@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claim Item</title>
+  <link rel="stylesheet" href="{% static 'css/lost&found.css' %}" />
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span class="circle"><img src="{% static 'image/logo.png' %}" alt="LOGO"></span>
+        <h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+    </div>
+</header>
+
+<div class="lost-container">
+    <div class="back">
+        <a href="{% url 'items:lost_and_found_list' %}">← Back to Items List</a>
+    </div>
+
+    <div class="container">
+        <h2>Claim Item</h2>
+        <h5>Provide proof that this item belongs to you</h5>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="upload-box">
+                <label for="upload" class="upload-label">
+                    <div class="upload-icon">⬆️</div>
+                    <p class="upload-text">Click to upload photo proof</p>
+                </label>
+                <input type="file" id="upload" name="proof" required hidden>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" name="full_name" placeholder="Enter Your Full Name" required />
+                </div>
+                <div class="input-group">
+                    <label>Student ID</label>
+                    <input type="text" name="student_id" placeholder="Enter your student id" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Program</label>
+                    <input type="text" name="program" placeholder="Enter your university program" required />
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Proof of Ownership (Description)</label>
+                <textarea name="description" placeholder="Describe how you can prove this item belongs to you..." required></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="cancel-btn">
+                    <a href="{% url 'items:lost_and_found_list' %}">Cancel</a>
+                </button>
+                <button type="submit" class="submit-btn">Submit Claim</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        Prototype of the Proposed Lost and Found Management System. (2025)
+    </footer>
+</div>
+
+</body>
+</html>

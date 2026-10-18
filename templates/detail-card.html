@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ item.name }}</title>
+  <link rel="stylesheet" href="{% static 'css/detail-card.css' %}" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span class="circle"><img src="{% static 'image/logo.png' %}" alt="LOGO"></span>
+      <h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+    </div>
+  </header>
+
+  <!-- Back Button -->
+  <div class="back-btn">
+    <a href="{% url 'items:lost_and_found_list' %}">← Back to Listings</a>
+  </div>
+
+  <!-- Item Detail -->
+  <div class="detail-container">
+    <div class="left">
+      <img src="{{ item.image.url }}" alt="{{ item.name }}" class="item-img">
+    </div>
+
+    <div class="right">
+      <h2>{{ item.name }}</h2>
+      <p><strong>Status:</strong> <span class="{{ status|lower }}">{{ status }}</span></p>
+      <p><strong>Category:</strong> {{ item.category.name }}</p>
+      <p><strong>Location:</strong> {{ location }}</p>
+      <p><strong>Date Reported:</strong> {{ date }}</p>
+      <p><strong>Description:</strong></p>
+      <p class="desc">{{ item.description }}</p>
+
+      <button class="claim-btn">
+        <a href="{% url 'claims:claim_item' item_status item.id %}">
+            Claim Item
+        </a>
+    </button>
+    
+    
+    </div>
+    
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>Prototype of the Proposed Lost and Found Management System. (2025)</p>
+  </footer>
+
+</body>
+</html>

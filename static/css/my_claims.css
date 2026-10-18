@@ -1,0 +1,72 @@
+/* ======= Global Reset & Font ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+}
+
+
+/* ===== Logo/Header Section ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #4A70A9;
+  color: white;
+  padding: 15px 0;
+  border-bottom: 1px solid black;
+}
+
+.logo .circle img {
+  width: 80px;
+  margin-left: 150px;
+}
+
+.logo h1 {
+  margin: 0 160px 0 20px;
+  font-size: 36px;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+.claims-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    background-color: #cbd7ff;
+    width: 400px;
+    max-width: 90%;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    /* position: relative; */
+    margin-left: 35%;
+    transition: .3s ease; 
+    
+}
+
+
+
+
+
+/* ===== Footer ===== */
+footer {
+  background: #4A70A9;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}

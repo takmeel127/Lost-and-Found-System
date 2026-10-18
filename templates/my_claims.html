@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Claims</title>
+    <link rel="stylesheet" href="{% static 'css/my_claims.css' %}">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span class="circle"><img src="{% static 'image/logo.png' %}" alt="LOGO"></span>
+        <h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+    </div>
+</header>
+
+<div class="claims-list">
+    {% for claim in claims %}
+        <div class="claim-item {% if claim.id|stringformat:"s" == claimed_id %}highlight{% endif %}">
+            {% if claim.lost_item %}
+                <strong>Lost Item:</strong> {{ claim.lost_item.name }} <br>
+            {% endif %}
+            {% if claim.found_item %}
+                <strong>Found Item:</strong> {{ claim.found_item.name }} <br>
+            {% endif %}
+            <strong>Status:</strong> {{ claim.status }} <br>
+            <strong>Claimed on:</strong> {{ claim.created_at|date:"M d, Y H:i" }}
+        </div>
+    {% empty %}
+        <p>You have not claimed any items yet.</p>
+    {% endfor %}
+</div>
+
+<footer>
+    Prototype of the Proposed Lost and Found Management System. (2025)
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* ======= Global Reset & Font ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body {
+  background: #8FABD4;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ======= Container ======= */
+.container {
+  background: #fff;
+  width: 400px;
+  max-width: 90%;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  transition: .3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ======= Icon ======= */
+.icon {
+  background: #faf8f2;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 32px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ======= Headings & Text ======= */
+.heading1{
+  color: black;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.heading2{
+  color: rgb(56, 54, 54);
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* ======= Back Button ======= */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  color: #8FABD4;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: .3s ease;
+}
+
+.back-btn:hover {
+  color: #4A70A9;
+}
+
+/* ======= Floating Label Inputs ======= */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: .3s ease;
+}
+
+.input-group input:focus {
+  border-color: #4A70A9;
+  box-shadow: 0 0 5px rgba(0, 122, 0, 0.3);
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #fff;
+  padding: 0 4px;
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transition: .3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #4A70A9;
+  font-weight: 500;
+}
+
+/* ======= Button ======= */
+.signin-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #8FABD4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.signin-btn:hover {
+  background: #4A70A9;
+  transform: translateY(-2px);
+}
+
+.student-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  background: #8FABD4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+}
+
+.student-btn:hover {
+  background: #4A70A9;
+  transform: translateY(-2px);
+}
+
+
+#studentLogin a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .2s ease;
+  margin-bottom: 20px;
+
+}
+
+
+/* ======= Errors ======= */
+.errors {
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 13px;
+  color: #d8000c;
+  background: #ffd2d2;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d8000c;
+}
+
+
+/* ======= Signup Link ======= */
+.container p a {
+  color: #007A00;
+  font-weight: 500;
+  transition: .3s ease;
+}
+
+.container p a:hover {
+  color: #004d00;
+}
+
+/* ======= Footer ======= */
+footer {
+  background: #8FABD4;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

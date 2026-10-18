@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Lost Item</title>
+  <link rel="stylesheet" href="{% static 'css/lost&found.css' %}" />
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span class="circle">
+            <img src="{% static 'image/logo.png' %}" alt="LOGO">
+        </span>
+        <h1>NATIONAL UNIVERSITY OF MODERN LANGUAGES</h1>
+    </div>
+</header>
+
+<div class="lost-container">
+
+    <div class="back">
+        <a href="{% url 'accounts:home' %}">← Back to Dashboard</a>
+    </div>
+
+    <div class="container">
+        <h2>Report Lost Item</h2>
+        <h5>Help us help you find your lost item</h5>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="upload-box">
+                {{ form.image }}
+                
+                <p class="upload-text">Click to upload a photo of your lost item</p>
+                <span>JPG, PNG or GIF (max 5MB)</span>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                </div>
+
+                <div class="input-group">
+                    {{ form.category.label_tag }}
+                    {{ form.category }}
+                </div>
+            </div>
+
+            <div class="input-group">
+                {{ form.description.label_tag }}
+                {{ form.description }}
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    {{ form.lost_date.label_tag }}
+                    {{ form.lost_date }}
+                </div>
+
+                <div class="input-group">
+                    {{ form.last_location.label_tag }}
+                    {{ form.last_location }}
+                </div>
+            </div>
+
+            <div class="buttons">
+                <a href="{% url 'accounts:home' %}" class="cancel-btn">Cancel</a>
+                <button type="submit" class="submit-btn">Submit Report</button>
+            </div>
+
+        </form>
+    </div>
+
+    <footer>
+        Prototype of the Proposed Lost and Found Management System. (2025)
+    </footer>
+
+</div>
+
+</body>
+</html>

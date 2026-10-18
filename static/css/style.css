@@ -1,0 +1,171 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+/* ===== Logo/Header Section ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4A70A9;
+  color: white;
+  padding: 15px 0;
+  border-bottom: solid 1px black;
+}
+
+.logo .circle img {
+  width: 80px;
+  margin-left: 150px;
+}
+
+.logo h1 {
+  margin-left: 20px;
+  margin-right: 160px;
+  font-size: 36px;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ===== Welcome Text ===== */
+.wel-user {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: #444;
+  font-size: 15px;
+}
+
+/* ===== Cards Section ===== */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  /* border: 1px solid #000; */
+  border-style: groove;
+  border-radius: 20px;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.red { color: red; }
+.green { color: green; }
+.blue { color: #007bff; }
+
+/* ===== Buttons ===== */
+.btn {
+  background-color: #4A70A9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #8FABD4;
+}
+
+/* ===== Bottom Buttons ===== */
+.bottom-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bottom-buttons button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#notifyBtn {
+  background-color: #eee;
+}
+
+.notification-btn{
+  color: black;
+}
+
+.logout {
+  background-color: #345079;
+  color: white;
+}
+
+.logout a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout:hover {
+  background-color: #8FABD4;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #4A70A9;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+footer p {
+  font-size: 15px;
+}
+
+
+
+
+
+
+
